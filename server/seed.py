@@ -21,14 +21,14 @@ with app.app_context():
     db.session.add_all([item1, item2, item3])
     db.session.commit()
 
-    db.session.add(Review(comment="zipper broke the first week",
+    db.session.add(Review(rating=2, comment="zipper broke the first week",
                    customer=customer1, item=item1))
-    db.session.add(Review(comment="love this backpack!",
+    db.session.add(Review(rating=5, comment="love this backpack!",
                    customer=customer2, item=item1))
-    db.session.add(Review(comment="coffee stays hot for hours!",
+    db.session.add(Review(rating=5, comment="coffee stays hot for hours!",
                    customer=customer1, item=item2))
-    db.session.add(Review(comment="best coffee mug ever!",
+    db.session.add(Review(rating=5, comment="best coffee mug ever!",
                    customer=customer3, item=item2))
-    db.session.add(Review(comment="cable too short",
+    db.session.add(Review(rating=3, comment="cable too short",
                    customer=customer3, item=item3))
     db.session.commit()
